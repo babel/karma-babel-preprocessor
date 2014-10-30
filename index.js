@@ -6,7 +6,6 @@ function createPreprocessor(args, config, logger, helper) {
   var log = logger.create('preprocessor.6to5');
 
   function sixToFive(content, file, done) {
-    console.log(arguments);
     log.debug('Processing "%s".', file.originalPath);
     file.path = file.originalPath + '-compiled.js';
 
