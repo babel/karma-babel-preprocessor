@@ -1,0 +1,20 @@
+{
+  "name": "karma-6to5-preprocessor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor",
+    "6to5",
+    "es6"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "6to5": "^1.10.7"
+  }
+}
