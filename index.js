@@ -9,16 +9,15 @@ function createPreprocessor(args, config, logger, helper) {
     log.debug('Processing "%s".', file.originalPath);
     file.path = file.originalPath + '-compiled.js';
 
-    var processed = null;
     try {
-      processed = to5.transform(content, {
+      var processed = to5.transform(content, {
         filename: file.originalPath
       }).code;
+      done(null, processed);
     } catch (e) {
-      log.debug('%s\n at %s', e.message, file.originalPath);
+      log.error('%s\n at %s', e.message, file.originalPath);
+      done(e, null);
     }
-
-    done(processed);
   }
 
   return sixToFive;
