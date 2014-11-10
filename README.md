@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/karma-6to5-preprocessor.svg)](http://badge.fury.io/js/karma-6to5-preprocessor)
+
 # karma-6to5-preprocessor
 
 > Preprocessor to compile ES6 on the fly with [6to5](https://github.com/sebmck/6to5).
