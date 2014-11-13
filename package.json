@@ -1,7 +1,7 @@
 {
   "name": "karma-6to5-preprocessor",
   "version": "0.1.1",
-  "description": "",
+  "description": "Preprocessor to compile ES6 on the fly with 6to5.",
   "homepage": "https://github.com/shuhei/karma-6to5-preprocessor",
   "bugs": {
     "url": "https://github.com/shuhei/karma-6to5-preprocessor/issues"
