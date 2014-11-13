@@ -2,6 +2,14 @@
   "name": "karma-6to5-preprocessor",
   "version": "0.1.0",
   "description": "",
+  "homepage": "https://github.com/shuhei/karma-6to5-preprocessor",
+  "bugs": {
+    "url": "https://github.com/shuhei/karma-6to5-preprocessor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shuhei/karma-6to5-preprocessor.git"
+  },
   "main": "index.js",
   "keywords": [
     "karma-plugin",
@@ -12,7 +20,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
+  "author": {
+    "name": "Shuhei Kagawa",
+    "email": "shuhei.kagawa@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "6to5": "^1.10.7"
