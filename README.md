@@ -1,5 +1,5 @@
-[![npm version](//img.shields.io/npm/v/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
-[![npm downloads](http://img.shields.io/npm/dm/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
+[![npm version](https://img.shields.io/npm/v/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
+[![npm downloads](https://img.shields.io/npm/dm/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
 
 # karma-6to5-preprocessor
 
