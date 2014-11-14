@@ -1,4 +1,5 @@
-[![npm version](https://badge.fury.io/js/karma-6to5-preprocessor.svg)](http://badge.fury.io/js/karma-6to5-preprocessor)
+[![npm version](//img.shields.io/npm/v/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
+[![npm downloads](http://img.shields.io/npm/dm/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
 
 # karma-6to5-preprocessor
 
