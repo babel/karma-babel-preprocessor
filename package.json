@@ -26,6 +26,9 @@
   },
   "license": "ISC",
   "dependencies": {
+    "resolve": "^1.0.0"
+  },
+  "devDependencies": {
     "6to5": "^2.0.0"
   }
 }

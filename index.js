@@ -1,7 +1,15 @@
 /* jshint node:true */
 
-var to5 = require('6to5');
 var extend = require('util')._extend;
+var resolve = require('resolve');
+
+var to5;
+try {
+  to5 = require(resolve.sync('6to5', { basedir: process.cwd() }));
+} catch (_) {
+  console.warn('Processing using inner 6to5. version : ' + to5.version);
+  to5 = require('6to5');
+}
 
 var PER_FILE_OPTIONS = [
   'filename',
