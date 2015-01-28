@@ -1,6 +1,6 @@
 /* jshint node:true */
 
-var to5 = require('6to5');
+var to5 = require('6to5-core');
 var extend = require('util')._extend;
 
 var PER_FILE_OPTIONS = [
