@@ -6,7 +6,8 @@ var extend = require('util')._extend;
 var PER_FILE_OPTIONS = [
   'filename',
   'sourceMapName',
-  'sourceFileName'
+  'sourceFileName',
+  'sourceRoot'
 ];
 
 function createPreprocessor(args, config, logger, helper) {
