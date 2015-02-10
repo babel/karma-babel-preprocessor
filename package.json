@@ -1,6 +1,6 @@
 {
   "name": "karma-6to5-preprocessor",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Preprocessor to compile ES6 on the fly with 6to5.",
   "homepage": "https://github.com/6to5/karma-6to5-preprocessor",
   "bugs": {
