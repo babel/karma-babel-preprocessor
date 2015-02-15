@@ -1,6 +1,6 @@
 /* jshint node:true */
 
-var to5 = require('6to5-core');
+var babel = require('babel-core');
 var extend = require('util')._extend;
 
 var PER_FILE_OPTIONS = [
@@ -10,7 +10,7 @@ var PER_FILE_OPTIONS = [
 ];
 
 function createPreprocessor(args, config, logger, helper) {
-  var log = logger.create('preprocessor.6to5');
+  var log = logger.create('preprocessor.babel');
 
   function sixToFive(content, file, done) {
     log.debug('Processing "%s".', file.originalPath);
@@ -18,7 +18,7 @@ function createPreprocessor(args, config, logger, helper) {
     file.path = options.filename || file.path;
 
     try {
-      var processed = to5.transform(content, options).code;
+      var processed = babel.transform(content, options).code;
       done(null, processed);
     } catch (e) {
       log.error('%s\n at %s', e.message, file.originalPath);
@@ -42,8 +42,8 @@ function createPreprocessor(args, config, logger, helper) {
 }
 
 createPreprocessor.$inject =
-  ['args', 'config.6to5Preprocessor', 'logger', 'helper'];
+  ['args', 'config.babelPreprocessor', 'logger', 'helper'];
 
 module.exports = {
-  'preprocessor:6to5': ['factory', createPreprocessor]
+  'preprocessor:babel': ['factory', createPreprocessor]
 };

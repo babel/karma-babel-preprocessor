@@ -1,21 +1,21 @@
-[![npm version](https://img.shields.io/npm/v/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
-[![npm downloads](https://img.shields.io/npm/dm/karma-6to5-preprocessor.svg)](https://www.npmjs.org/package/karma-6to5-preprocessor)
+[![npm version](https://img.shields.io/npm/v/karma-babel-preprocessor.svg)](https://www.npmjs.org/package/karma-babel-preprocessor)
+[![npm downloads](https://img.shields.io/npm/dm/karma-babel-preprocessor.svg)](https://www.npmjs.org/package/karma-babel-preprocessor)
 
-# karma-6to5-preprocessor
+# karma-babel-preprocessor
 
-> Preprocessor to compile ES6 on the fly with [6to5](https://github.com/sebmck/6to5).
+> Preprocessor to compile ES6 on the fly with [babel](https://github.com/6to5/babel).
 
 ## Installation
 
 ```bash
-npm install karma-6to5-preprocessor --save-dev
+npm install karma-babel-preprocessor --save-dev
 ```
 
 ## Configuration
 
-See [6to5 options](https://github.com/sebmck/6to5#options) for more details.
+See [babel options](https://babeljs.io/docs/usage/options) for more details.
 
-Given `options` properties are passed to 6to5 with no change except:
+Given `options` properties are passed to babel with no change except:
 
 - filename
 - sourceMapName
@@ -33,10 +33,10 @@ module.exports = function(config) {
       'test/**/*.js'
     ],
     preprocessors: {
-      'src/**/*.js': ['6to5'],
-      'test/**/*.js': ['6to5']
+      'src/**/*.js': ['babel'],
+      'test/**/*.js': ['babel']
     },
-    '6to5Preprocessor': {
+    'babelPreprocessor': {
       options: {
         sourceMap: 'inline'
       },
