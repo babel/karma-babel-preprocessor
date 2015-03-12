@@ -30,6 +30,7 @@ For example, inline sourcemap configuration would look like the following.
 module.exports = function(config) {
   config.set({
     files: [
+      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
       'src/**/*.js',
       'test/**/*.js'
     ],
@@ -50,4 +51,20 @@ module.exports = function(config) {
     }
   });
 };
+```
+
+### Polyfill
+
+If you need [polyfill](https://babeljs.io/docs/usage/polyfill/), make sure to include it in `files`.
+
+```
+module.exports = function(config) {
+  config.set({
+    files: [
+      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
+      // ...
+    ],
+    // ...
+  });
+});
 ```
