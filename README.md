@@ -52,7 +52,7 @@ module.exports = function(config) {
 
 If you need [polyfill](https://babeljs.io/docs/usage/polyfill/), make sure to include it in `files`.
 
-```
+```js
 module.exports = function(config) {
   config.set({
     files: [
@@ -69,7 +69,7 @@ module.exports = function(config) {
 
 In most cases, you don't need to explicitly specify `plugins` option. By default, Karma loads all sibling NPM modules which have a name starting with karma-*. If need to do so for some reason, make sure to include `'karma-babel-preprocessor'` in it.
 
-```
+```js
 module.exports = function(config) {
   config.set({
     plugins: [
