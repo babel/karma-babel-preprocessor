@@ -29,16 +29,11 @@ For example, inline sourcemap configuration would look like the following.
 ```js
 module.exports = function(config) {
   config.set({
-    files: [
-      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
-      'src/**/*.js',
-      'test/**/*.js'
-    ],
     preprocessors: {
       'src/**/*.js': ['babel'],
       'test/**/*.js': ['babel']
     },
-    'babelPreprocessor': {
+    babelPreprocessor: {
       options: {
         sourceMap: 'inline'
       },
@@ -67,4 +62,22 @@ module.exports = function(config) {
     // ...
   });
 });
+```
+
+### Karma's plugins option
+
+
+In most cases, you don't need to explicitly specify `plugins` option. By default, Karma loads all sibling NPM modules which have a name starting with karma-*. If need to do so for some reason, make sure to include `'karma-babel-preprocessor'` in it.
+
+```
+module.exports = function(config) {
+  config.set({
+    plugins: [
+     'karma-jasmine',
+     'karma-chrome-launcher',
+     'karma-babel-preprocessor'
+    ],
+    // ...
+  });
+};
 ```
