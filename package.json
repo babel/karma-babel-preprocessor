@@ -1,6 +1,6 @@
 {
   "name": "karma-babel-preprocessor",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Preprocessor to compile ES6 on the fly with babel.",
   "homepage": "https://github.com/babel/karma-babel-preprocessor",
   "bugs": {
@@ -14,6 +14,7 @@
   "keywords": [
     "karma-plugin",
     "karma-preprocessor",
+    "babel",
     "6to5",
     "es6"
   ],
