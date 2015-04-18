@@ -3,17 +3,10 @@
 var babel = require('babel-core');
 var extend = require('util')._extend;
 
-var PER_FILE_OPTIONS = [
-  'filename',
-  'sourceMapName',
-  'sourceFileName',
-  'sourceRoot'
-];
-
 function createPreprocessor(args, config, logger, helper) {
   var log = logger.create('preprocessor.babel');
 
-  function sixToFive(content, file, done) {
+  function preprocess(content, file, done) {
     log.debug('Processing "%s".', file.originalPath);
     var options = createOptions(config, file);
     file.path = options.filename || file.path;
@@ -27,19 +20,22 @@ function createPreprocessor(args, config, logger, helper) {
     }
   }
 
-  function createOptions(config, file) {
-    config = config || {};
-    var options = extend({ filename: file.originalPath }, config.options || {});
-    PER_FILE_OPTIONS.forEach(function(optionName) {
-      var configFunc = config[optionName];
-      if (typeof configFunc === 'function') {
-        options[optionName] = configFunc(file);
-      }
-    });
-    return options;
-  }
+  return preprocess;
+}
 
-  return sixToFive;
+function createOptions(config, file) {
+  config = config || {};
+  var options = extend({ filename: file.originalPath }, config.options || {});
+  Object.keys(config).forEach(function(optionName) {
+    if (optionName === 'options') {
+      return;
+    }
+    var configFunc = config[optionName];
+    if (typeof configFunc === 'function') {
+      options[optionName] = configFunc(file);
+    }
+  });
+  return options;
 }
 
 createPreprocessor.$inject =

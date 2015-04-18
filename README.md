@@ -15,14 +15,9 @@ npm install karma-babel-preprocessor --save-dev
 
 See [babel options](https://babeljs.io/docs/usage/options) for more details.
 
-Given `options` properties are passed to `babel`.
+Given `options` properties are passed to babel.
 
-In addition to the `options` property, you can configure the following options with functions because they may differ from file to file.
-
-- `filename`
-- `sourceRoot`
-- `sourceMapName`
-- `sourceFileName`
+In addition to the `options` property, you can configure any babel options with function properties. This is useful when you want to give different babel options from file to file.
 
 For example, inline sourcemap configuration would look like the following.
 
