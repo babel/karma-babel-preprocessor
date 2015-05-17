@@ -8,7 +8,7 @@ function createPreprocessor(args, config, logger, helper) {
 
   function preprocess(content, file, done) {
     log.debug('Processing "%s".', file.originalPath);
-    var options = createOptions(config, file);
+    var options = createOptions(args, config, helper, file);
     file.path = options.filename || file.path;
 
     try {
@@ -23,9 +23,9 @@ function createPreprocessor(args, config, logger, helper) {
   return preprocess;
 }
 
-function createOptions(config, file) {
+function createOptions(args, config, helper, file) {
   config = config || {};
-  var options = extend({ filename: file.originalPath }, config.options || {});
+  var options = helper.merge({ filename: file.originalPath }, args.options || {}, config.options || {});
   Object.keys(config).forEach(function(optionName) {
     if (optionName === 'options') {
       return;
