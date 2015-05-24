@@ -22,7 +22,7 @@ In addition to the `options` property, you can configure any babel options with 
 For example, inline sourcemap configuration would look like the following.
 
 ```js
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     preprocessors: {
       'src/**/*.js': ['babel'],
@@ -32,10 +32,10 @@ module.exports = function(config) {
       options: {
         sourceMap: 'inline'
       },
-      filename: function(file) {
+      filename: function (file) {
         return file.originalPath.replace(/\.js$/, '.es5.js');
       },
-      sourceFileName: function(file) {
+      sourceFileName: function (file) {
         return file.originalPath;
       }
     }
@@ -48,7 +48,7 @@ module.exports = function(config) {
 If you need [polyfill](https://babeljs.io/docs/usage/polyfill/), make sure to include it in `files`.
 
 ```js
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     files: [
       'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
@@ -61,11 +61,10 @@ module.exports = function(config) {
 
 ### Karma's plugins option
 
-
 In most cases, you don't need to explicitly specify `plugins` option. By default, Karma loads all sibling NPM modules which have a name starting with karma-*. If need to do so for some reason, make sure to include `'karma-babel-preprocessor'` in it.
 
 ```js
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     plugins: [
      'karma-jasmine',
@@ -73,6 +72,36 @@ module.exports = function(config) {
      'karma-babel-preprocessor'
     ],
     // ...
+  });
+};
+```
+
+## Custom preprocessor
+
+karma-babel-preprocessor supports custom preprocessor. Set `base: 'babel'` in addition to normal preprocessor config.
+
+```js
+module.exports = function (config) {
+  config.set({
+    preprocessors: {
+      'src/**/*.js': ['babelSourceMap'],
+      'test/**/*.js': ['babelSourceMap']
+    },
+    customPreprocessors: {
+      babelSourceMap: {
+        base: 'babel',
+        options: {
+          sourceMap: 'inline'
+        },
+        filename: function (file) {
+          return file.originalPath.replace(/\.js$/, '.es5.js');
+        },
+        sourceFileName: function (file) {
+          return file.originalPath;
+        }
+      },
+      // Other custom preprocessors...
+    }
   });
 };
 ```
