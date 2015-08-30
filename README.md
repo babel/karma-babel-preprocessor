@@ -45,6 +45,39 @@ module.exports = function (config) {
 };
 ```
 
+### Don't preprocess third-party libraries
+
+Third-party libraries may not work properly if you apply `karma-babel-preprocessor` to them. It also introduces unnecessary overhead. Make sure to explicitly specify files that you want to preprocess.
+
+OK:
+
+```js
+module.exports = function (config) {
+  config.set({
+    preprocessors: {
+      'src/**/*.js': ['babel'],
+      'test/**/*.js': ['babel']
+    },
+    // ...
+  });
+};
+```
+
+NG:
+
+```js
+module.exports = function (config) {
+  config.set({
+    preprocessors: {
+      './**/*.js': ['babel']
+    },
+    // ...
+  });
+};
+```
+
+Because it preprocesses files in `node_modules` and may break third-party libraries like jasmine #18.
+
 ### Polyfill
 
 If you need [polyfill](https://babeljs.io/docs/usage/polyfill/), make sure to include it in `files`.
