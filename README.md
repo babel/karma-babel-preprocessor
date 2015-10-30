@@ -1,3 +1,4 @@
+[![build status](https://img.shields.io/travis/babel/karma-babel-preprocessor.svg)](https://travis-ci.org/babel/karma-babel-preprocessor)
 [![npm version](https://img.shields.io/npm/v/karma-babel-preprocessor.svg)](https://www.npmjs.org/package/karma-babel-preprocessor)
 [![npm downloads](https://img.shields.io/npm/dm/karma-babel-preprocessor.svg)](https://www.npmjs.org/package/karma-babel-preprocessor)
 
