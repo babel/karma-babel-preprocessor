@@ -89,11 +89,15 @@ Because it preprocesses files in `node_modules` and may break third-party librar
 
 If you need [polyfill](https://babeljs.io/docs/usage/polyfill/), make sure to include it in `files`.
 
+```bash
+npm install babel-polyfill --save-dev
+```
+
 ```js
 module.exports = function (config) {
   config.set({
     files: [
-      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
+      'node_modules/babel-polyfill/dist/polyfill.js',
       // ...
     ],
     // ...
