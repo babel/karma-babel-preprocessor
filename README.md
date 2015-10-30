@@ -13,6 +13,12 @@
 npm install karma-babel-preprocessor --save-dev
 ```
 
+As of Babel 6.0, [you need to tell Babel which features to use](http://babeljs.io/docs/plugins/). [babel-preset-es2015](http://babeljs.io/docs/plugins/preset-es2015/) would be the most common one.
+
+```bash
+npm install babel-preset-es2015 --save-dev
+```
+
 ## Configuration
 
 See [babel options](https://babeljs.io/docs/usage/options) for more details.
@@ -32,6 +38,7 @@ module.exports = function (config) {
     },
     babelPreprocessor: {
       options: {
+        presets: ['es2015'],
         sourceMap: 'inline'
       },
       filename: function (file) {
@@ -126,6 +133,7 @@ module.exports = function (config) {
       babelSourceMap: {
         base: 'babel',
         options: {
+          presets: ['es2015'],
           sourceMap: 'inline'
         },
         filename: function (file) {
