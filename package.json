@@ -28,11 +28,11 @@
   },
   "license": "ISC",
   "dependencies": {
-    "babel-core": "^6.0.0"
+    "babel-core": "^6.4"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.0.2",
-    "babel-preset-es2015": "^6.0.12",
+    "babel-polyfill": "^6.3",
+    "babel-preset-es2015": "^6.4",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.14",
     "karma-jasmine": "^0.3.6",
