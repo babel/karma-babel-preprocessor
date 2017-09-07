@@ -27,10 +27,11 @@
     "email": "shuhei.kagawa@gmail.com"
   },
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "babel-core": "^6.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.0.0",
     "babel-polyfill": "^6.0.2",
     "babel-preset-es2015": "^6.0.12",
     "jasmine-core": "^2.3.4",
