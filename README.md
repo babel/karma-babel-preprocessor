@@ -14,10 +14,10 @@
 npm install karma-babel-preprocessor --save-dev
 ```
 
-As of Babel 6.0, [you need to tell Babel which features to use](http://babeljs.io/docs/plugins/). [babel-preset-es2015](http://babeljs.io/docs/plugins/preset-es2015/) would be the most common one.
+As of Babel 6.0, [you need to tell Babel which features to use](http://babeljs.io/docs/plugins/). [babel-preset-env](http://babeljs.io/docs/plugins/preset-env/) would be the most common one.
 
 ```bash
-npm install babel-preset-es2015 --save-dev
+npm install babel-preset-env --save-dev
 ```
 
 ## Configuration

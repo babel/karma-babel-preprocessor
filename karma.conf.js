@@ -41,7 +41,7 @@ module.exports = function(config) {
 
     babelPreprocessor: {
       options: {
-        presets: ['es2015']
+        presets: ['env']
       }
     },
 
