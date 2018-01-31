@@ -31,13 +31,13 @@
     "@babel/core": "7 || ^7.0.0-beta || ^7.0.0-rc"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.37",
-    "@babel/polyfill": "7.0.0-beta.37",
-    "@babel/preset-env": "7.0.0-beta.37",
+    "@babel/core": "7.0.0-beta.39",
+    "@babel/polyfill": "7.0.0-beta.39",
+    "@babel/preset-env": "7.0.0-beta.39",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.13.14",
-    "karma-jasmine": "^0.3.6",
-    "karma-phantomjs-launcher": "^0.2.1",
+    "karma": "^2.0.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
     "phantomjs": "^1.9.18"
   }
 }
