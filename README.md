@@ -10,15 +10,19 @@
 
 ## Installation
 
+With babel 7.x:
+
 ```bash
-npm install karma-babel-preprocessor --save-dev
+npm install karma-babel-preprocessor@next @babel/core @babel/preset-env --save-dev
+```
+
+With babel 6.x:
+
+```bash
+npm install karma-babel-preprocessor babel-core babel-preset-env --save-dev
 ```
 
 As of Babel 6.0, [you need to tell Babel which features to use](http://babeljs.io/docs/plugins/). [@babel/preset-env](http://babeljs.io/docs/plugins/preset-env/) would be the most common one.
-
-```bash
-npm install @babel/preset-env --save-dev
-```
 
 ## Configuration
 
