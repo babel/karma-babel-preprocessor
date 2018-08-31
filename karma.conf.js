@@ -41,7 +41,7 @@ module.exports = function(config) {
 
     babelPreprocessor: {
       options: {
-        presets: ['@babel/env']
+        presets: ['@babel/preset-env']
       }
     },
 

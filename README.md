@@ -43,7 +43,7 @@ module.exports = function (config) {
     },
     babelPreprocessor: {
       options: {
-        presets: ['env'],
+        presets: ['@babel/preset-env'],
         sourceMap: 'inline'
       },
       filename: function (file) {
@@ -142,7 +142,7 @@ module.exports = function (config) {
       babelSourceMap: {
         base: 'babel',
         options: {
-          presets: ['env'],
+          presets: ['@babel/preset-env'],
           sourceMap: 'inline'
         },
         filename: function (file) {
