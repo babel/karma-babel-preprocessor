@@ -19,6 +19,9 @@
     "es6",
     "es2015"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "test": "karma start"
   },
