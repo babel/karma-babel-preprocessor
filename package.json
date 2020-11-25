@@ -40,8 +40,8 @@
     "@babel/preset-typescript": "^7.12.7",
     "@types/jasmine": "^3.6.2",
     "jasmine-core": "^3.6.0",
-    "karma": "^3.1.4",
-    "karma-jasmine": "^2.0.1",
+    "karma": "^5.2.3",
+    "karma-jasmine": "^4.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "phantomjs-prebuilt": "^2.1.16"
   }
