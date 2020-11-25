@@ -37,6 +37,8 @@
     "@babel/core": "^7.6.2",
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jasmine": "^3.6.2",
     "jasmine-core": "^3.5.0",
     "karma": "^3.1.4",
     "karma-jasmine": "^2.0.1",

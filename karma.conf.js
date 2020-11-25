@@ -16,7 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/@babel/polyfill/dist/polyfill.js',
-      'test/*.js'
+      'test/*.js',
+      'test/*.ts'
     ],
 
 
@@ -35,7 +36,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/**/*.js': 'babel'
+      'test/**/*.js': 'babel',
+      'test/**/*.ts': 'babelTypeScript'
     },
 
 
@@ -45,6 +47,18 @@ module.exports = function(config) {
       }
     },
 
+    customPreprocessors: {
+      babelTypeScript: {
+        base: 'babel',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-typescript'],
+          sourceMap: 'inline'
+        },
+        filename: function (file) {
+          return file.originalPath.replace(/\.ts$/, '.js');
+        }
+      },
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
