@@ -43,6 +43,7 @@
     "jsdom": "^16.4.0",
     "karma": "^5.2.3",
     "karma-jasmine": "^4.0.1",
-    "karma-jsdom-launcher": "^8.0.2"
+    "karma-jsdom-launcher": "^8.0.2",
+    "request": "^2.88.2"
   }
 }
