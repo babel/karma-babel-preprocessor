@@ -20,7 +20,7 @@
     "es2015"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "scripts": {
     "test": "karma start"
