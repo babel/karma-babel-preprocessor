@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test on Node.js # GitHub will add ${{ matrix.node-version }} to this title
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 12, 10, 8, 6]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
