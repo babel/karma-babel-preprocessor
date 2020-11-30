@@ -28,7 +28,7 @@ module.exports = function(config) {
 
     plugins: [
       'karma-jasmine',
-      'karma-phantomjs-launcher',
+      'karma-jsdom-launcher',
       require('./lib')
     ],
 
@@ -85,7 +85,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['jsdom'],
 
 
     // Continuous Integration mode
