@@ -17,9 +17,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
+      - name: Downgrade Jasmine for Node <= 12
+        if: matrix.node-version == '6' || matrix.node-version == '8' || matrix.node-version == '10' || matrix.node-version == '12'
+        run: |
+          npm uninstall jasmine-core
+          npm install --save-dev jasmine-core@3
       - name: Downgrade Karma and jsdom for Node <= 8
         if: matrix.node-version == '6' || matrix.node-version == '8'
         run: |
-          npm uninstall karma karma-jasmine jsdom
-          npm install --save-dev karma@3 karma-jasmine@2 jsdom@11
+          npm uninstall karma karma-jasmine jsdom karma-jsdom-launcher
+          npm install --save-dev karma@3 karma-jasmine@2 jsdom@11 karma-jsdom-launcher@9
       - run: npm test
