@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14, 12, 10, 8, 6]
+        node-version: [16, 14, 12, 10, 8, 6]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - name: Downgrade Karma and jsdom for Node <= 8
-        if: matrix.node-version == '6' || matrix.node-version == '8'
+      - name: Downgrade dev dependencies for Node <= 12
+        if: matrix.node-version == '6' || matrix.node-version == '8' || matrix.node-version == '10' || matrix.node-version == '12'
         run: |
-          npm uninstall karma karma-jasmine jsdom
-          npm install --save-dev karma@3 karma-jasmine@2 jsdom@11
+          npm uninstall karma karma-jasmine jsdom karma-jsdom-launcher jasmine-core
+          npm install --save-dev karma@3 karma-jasmine@2 jsdom@11 karma-jsdom-launcher@9 jasmine-core@3
       - run: npm test
