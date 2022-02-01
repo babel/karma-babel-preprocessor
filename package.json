@@ -11,6 +11,9 @@
     "url": "https://github.com/babel/karma-babel-preprocessor.git"
   },
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "karma-plugin",
     "karma-preprocessor",
