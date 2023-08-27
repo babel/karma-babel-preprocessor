@@ -6,6 +6,12 @@
 
 > Preprocessor to compile ES6 on the fly with [babel](https://github.com/6to5/babel).
 
+## Deprecation notice
+
+**[The Karma test runner](https://github.com/karma-runner/karma) is deprecated and is not accepting new features or general bug fixes. karma-babel-preprocessor is deprecated as well.**
+
+## karma-babel-preprocessor doesn't resolve modules by itself
+
 **babel and karma-babel-preprocessor only convert ES6 modules to CommonJS/AMD/SystemJS/UMD. If you choose CommonJS, you still need to resolve and concatenate CommonJS modules on your own. We recommend [karma-browserify](https://github.com/Nikku/karma-browserify) + [babelify](https://github.com/babel/babelify) or [webpack](https://github.com/webpack/karma-webpack) + [babel-loader](https://github.com/babel/babel-loader) in such cases.**
 
 ## Installation
