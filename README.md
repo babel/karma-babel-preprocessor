@@ -57,6 +57,31 @@ module.exports = function (config) {
 };
 ```
 
+### Caching
+
+Adding the field `cachePath` will enable caching.  Cached output from babel
+will be stored into that file, along with md5 hashes of the original contents
+of each file.  If an original file hasn't changed, the cached babel-processed
+results will be reused.
+
+```js
+module.exports = function (config) {
+  config.set({
+    preprocessors: {
+      'src/**/*.js': ['babel'],
+      'test/**/*.js': ['babel']
+    },
+    babelPreprocessor: {
+      cachePath: '.babel-cache',
+      options: {
+        presets: ['@babel/preset-env'],
+        sourceMap: 'inline'
+      },
+    }
+  });
+};
+```
+
 ### Don't preprocess third-party libraries
 
 Third-party libraries may not work properly if you apply `karma-babel-preprocessor` to them. It also introduces unnecessary overhead. Make sure to explicitly specify files that you want to preprocess.
